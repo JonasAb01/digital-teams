@@ -9,17 +9,22 @@
     font-family: 'Open Sans', sans-serif;
  }
 :root {
-    --color1: black
+    --color1: #242424;
+    --color2: #C81C6F;
+    --color3: #333333;
+    --color4: #464646;
+    
+
 }
 
 html {
     scroll-behavior: smooth;
 }
 body {
-    background-color: rgba(0, 0, 0, 0.952);
+    background-color: var(--color1);
 }
 header {
-    background-color: rgba(0, 0, 0, 0.884);
+    background-color: var(--color1);
     display: flex;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -67,7 +72,7 @@ header nav #pesq {
     font-weight: bold;
     font-size: 12px;
     background-color: transparent;
-    border: 2px solid #cb0b96;
+    border: 2px solid var(--color2);
     border-radius: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -88,14 +93,14 @@ header nav #pesq {
 #teams #list_of_teams {
     width: 100%;
     margin-top: 20px;
-    gap: 6px;
+    gap: 14px;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 50px;
-    background-color: #cb0b96;
+    background-color: var(--color2);
 }
 #teams #list_of_teams .card_team {
-    background-color: #2c2c2c;
+    background-color: var(--color3);
     padding-top: 15px;
     padding-bottom: 15px;
     padding-right: 16px;
@@ -108,7 +113,7 @@ header nav #pesq {
     color: white;
 }
 #teams #list_of_teams .card_team #count_users {
-    background-color:#444444;
+    background-color: var(--color4);
     text-align: center;
     border-radius: 70%;
     padding: 50px 20px;
@@ -123,7 +128,7 @@ header nav #pesq {
 }
 #teams #list_of_teams .card_team #add_user_exit #add_user{
     background-color: transparent;
-    border: 2px solid #cb0b96;
+    border: 2px solid var(--color2);
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 35px;
@@ -138,11 +143,15 @@ header nav #pesq {
 #teams #list_of_teams .card_team #add_user_exit #exit_user {
     background-color: transparent;
     color: white;
-    border: 2px solid #cb0b96;
+    border: 2px solid var(--color2);
     border-radius: 5px;
     padding-left: 15px;
     padding-right: 15px;
 }
 #teams #list_of_teams .card_team #add_user_exit #exit_user:hover {
     cursor: pointer;
+}
+#icon_eye {
+    font-size: 13px;
+    margin-top: 7px;
 }
