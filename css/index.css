@@ -88,6 +88,7 @@ header nav box-icon:hover {
     font-weight: bold;
     font-size: 12px;
     background-color: transparent;
+    text-transform: uppercase;
     border: 2px solid var(--color2);
     border-radius: 5px;
     padding-top: 10px;
@@ -95,7 +96,7 @@ header nav box-icon:hover {
     padding-right: 15px;
     padding-left: 15px;
     color: white;
-    transition-duration: 300ms;
+    transition-duration: 600ms;
 
 }
 #teams #add_new_team #new_team #icon_plus {
@@ -104,42 +105,49 @@ header nav box-icon:hover {
 #teams #add_new_team #new_team:hover {
     cursor: pointer;
     box-shadow: 0px 0px 13px 1px rgba(255, 255, 255, 0.178);
+    background-color: var(--color2);
 }
 #teams #list_of_teams {
-    width: 100%;
     margin-top: 20px;
-    gap: 14px;
+    gap: 16px;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 50px;
-    /*background-color: var(--color2);*/ 
 }
 #teams #list_of_teams .card_team {
     background-color: var(--color3);
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-right: 16px;
-    padding-left: 16px;
+    width: calc(20% - 13px);
     border-radius: 10px;
 }
 #teams #list_of_teams .card_team #name_team_user {
     display: flex;
     gap: 30px;
     color: white;
+    margin-left: 15px;
+    margin-top: 10px;
 }
 #teams #list_of_teams .card_team #count_users {
     background-color: var(--color4);
     text-align: center;
-    border-radius: 70%;
-    padding: 50px 20px;
-    margin-right: 50px;
-    margin-left: 50px ;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    margin: 26px auto;
+    color: white;
 }
+#teams #list_of_teams .card_team #count_users h1 {
+    font-size: 50px;
+    font-weight: lighter;
+}
+#teams #list_of_teams .card_team #count_users h6 {
+    font-size: 16px;
+}
+
 #teams #list_of_teams .card_team #add_user_exit {
     display: flex;
     gap: 15px;
+    margin-left: 13px;
+    margin-bottom: 13px;
 }
 #teams #list_of_teams .card_team #add_user_exit #add_user{
     background-color: transparent;
