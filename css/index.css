@@ -13,6 +13,7 @@
     --color2: #C81C6F;
     --color3: #333333;
     --color4: #464646;
+    --black90: #00000090;
     
 
 }
@@ -178,3 +179,97 @@ header nav box-icon:hover {
     font-size: 13px;
     margin-top: 7px;
 }
+/* ---------------- testando -------------------- */
+#layer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--black-90);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    visibility: hidden;
+    z-index: 1;
+    opacity: 0;
+    transition-duration: 200ms;
+}
+form{
+    position: fixed;
+    width: 500px;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--black90);
+    padding: 26px;
+    border-radius: 10px;
+    color: white;
+    visibility: hidden;
+    z-index: 2;
+    opacity: 0;
+    transition-duration: 600ms; 
+}
+#layer .overlay_show {
+    opacity: 1;
+    visibility: visible;
+}
+.show {
+    opacity: 1;
+    visibility: visible;
+}
+form h3 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    
+}
+form  h3 box-icon {
+    fill: white;
+    transition-duration: 1s;
+    background-color: transparent;
+    border-radius: 100%;
+    padding: 2px;
+}
+form h3 box-icon:hover {
+    background-color: var(--color2);
+    cursor: pointer;
+}
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 15px;
+    font-weight: bold;
+}
+form input {
+    margin-bottom: 10px;
+    width: 100%;
+    border: 2px solid var(--color3);
+    background-color: transparent;
+    padding-left: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    transition-duration: 1s;
+    color: white;
+    
+}
+form input:focus {
+    border-color: #C81C6F;
+}
+form button {
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid var(--color3);
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    transition-duration: 1s;
+}
+form button:hover {
+    cursor: pointer;
+    border-color: #C81C6F;
+}
+/*------------------ testando --------------------*/
