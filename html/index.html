@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Teams</title>
     <link rel="stylesheet" href="/css/index.css">
-    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -19,42 +19,30 @@
             <box-icon name='search-alt' id="icon_busc"></box-icon>
         </nav>
     </header>
-    <main>
+    <main id="itens">
     <section id="teams">
         <div id="add_new_team">
             <h2>Teams</h2>
             <button id="new_team"><i class="fa-solid fa-plus" id="icon_plus"></i>NOVO TEAM</button>
         </div>
         <ul id="list_of_teams">
-            <li class="card_team">
-                <div id="name_team_user">
-                    <h3 id="name_team">Nome do Team</h3>
-                    <i class="fa-solid fa-eye" id='icon_eye'></i>
-                </div>
-                <div id="count_users">
-                    <h1>0 </h1>
-                    <h6>/ 0</h6>
-                </div>
-                <div id="add_user_exit">
-                    <button id="add_user">Adicionar</button>
-                    <button id="exit_user">
-                        <i class="fa-solid fa-trash"></i>
-                    </button>
-                </div>
-            </li>
         </ul>
     </section>
-    <div id="layer"></div>
-    <form id="formulario">
-        <h3>Criar <box-icon name="x" id="exit_form"></box-icon></h3>
-        <label for="">Criar Team</label>
-        <input type="text" required maxlength="25">
-        <label for="">Quantidade</label>
-        <input type="text" required maxlength="2">
-        <button type="submit">Criar</button>
-    </form>
+    <section id="section_form_team">
+        <div id="layer"></div>
+        <form id="formulario">
+            <h3>Criar Team<box-icon name="x" id="exit_form"></box-icon></h3>
+            <label for="name_team">Nome</label>
+            <input type="text" required maxlength="25"  pattern="([aA-zZ]+)" id="name_team">
+            <label for="capacity">Quantidade</label>
+            <input type="number" min="2" max="10" required  id="capacity">
+            <button type="submit" onclick="criar_team()">Criar</button>
+        </form>
+    </section>
+    <section id="section_add_user">
+        <!-- formulario para adicionar usuario -->
+    </section>
     </main>
-
     <script src="https://kit.fontawesome.com/54d0d9f1ff.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="/js/index.js"></script>

@@ -10,7 +10,7 @@
  }
 :root {
     --color1: #242424;
-    --color2: #C81C6F;
+    --color2: #c81c6f;
     --color3: #333333;
     --color4: #464646;
     --black90: #00000090;
@@ -126,6 +126,8 @@ header nav box-icon:hover {
     color: white;
     margin-left: 15px;
     margin-top: 10px;
+    margin-right: 20px;
+    justify-content: space-between;
 }
 #teams #list_of_teams .card_team #count_users {
     background-color: var(--color4);
@@ -190,7 +192,6 @@ header nav box-icon:hover {
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
     visibility: hidden;
-    z-index: 1;
     opacity: 0;
     transition-duration: 200ms;
 }
@@ -205,11 +206,10 @@ form{
     border-radius: 10px;
     color: white;
     visibility: hidden;
-    z-index: 2;
     opacity: 0;
     transition-duration: 600ms; 
 }
-#layer .overlay_show {
+#layer.overlay_show {
     opacity: 1;
     visibility: visible;
 }
@@ -223,14 +223,14 @@ form h3 {
     margin-bottom: 10px;
     
 }
-form  h3 box-icon {
+form box-icon {
     fill: white;
     transition-duration: 1s;
     background-color: transparent;
     border-radius: 100%;
     padding: 2px;
 }
-form h3 box-icon:hover {
+form box-icon:hover {
     background-color: var(--color2);
     cursor: pointer;
 }
@@ -253,6 +253,15 @@ form input {
     color: white;
     
 }
+input[type="number"] {
+    -webkit-appearance: textfield;
+       -moz-appearance: textfield;
+            appearance: textfield;
+  }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+  }
 form input:focus {
     border-color: #C81C6F;
 }
@@ -273,3 +282,18 @@ form button:hover {
     border-color: #C81C6F;
 }
 /*------------------ testando --------------------*/
+
+#form_add {
+    background-color:var(--black90);
+    position: fixed;
+    top: 55%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    visibility: visible;
+    opacity: 1;
+}
+#form_add  h3{
+    color: white;
+    font-weight: bold;
+}
